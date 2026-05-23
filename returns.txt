@@ -1,0 +1,65 @@
+95:    return () => clearTimeout(timer);
+98:  return (
+361:    return () => clearInterval(timer);
+385:  return (
+497:  return (
+615:        return () => {
+1090:    if (isNaN(amount) || amount <= 0) return;
+1112:    if (isNaN(amount) || amount <= 0 || amount > user.tonBalance || !user.walletAddress) return;
+1187:    if (user.casesCount <= 0 || openingCase) return;
+1212:        return newUser;
+1235:      return acc + ratePerHour;
+1241:    if (user.referralRewardsTon <= 0 && user.referralRewardsDspt <= 0) return;
+1256:        if (d.status === 'completed') return d;
+1263:          return { 
+1277:        return {
+1285:    return () => clearInterval(interval);
+1289:    if (amount > user.tonBalance) return;
+1292:      return;
+1296:      return;
+1341:      return;
+1377:      return;
+1412:        return { 
+1420:      return d;
+1435:    if (!deposit || deposit.isClaimed || deposit.status !== 'completed') return;
+1449:        return (
+1567:                          return (
+1630:                          return (
+1750:        return (
+1762:        return <BoostScreen onActivate={activateBoost} currentBoost={user.activeBoost} onBack={() => setScreen('home')} t={t} />;
+1765:        return (
+1792:        return <AirdropScreen dsptPoints={user.dsptPoints} t={t} lang={lang} />;
+1795:        return (
+1805:        return (
+1828:  return (
+2101:  return (
+2237:  return (
+2303:    if (activeTab === 'all') return true;
+2304:    if (activeTab === 'social') return task.id.startsWith('tg_');
+2305:    if (activeTab === 'daily') return task.id.startsWith('daily_');
+2306:    return true;
+2312:  return (
+2381:            return (
+2484:  return (
+2738:  return (
+2876:  if (!isOpen) return null;
+2977:1.4. Participation is completely voluntary, TON funds deposited are not investments and do not guarantee income or return.
+3025:5.2. The administration reserves the right to redistribute pool funds exclusively to maintain and develop the platform, without return to participants.
+3048:7.2. TON deposited are not considered as investments and do not guarantee return.
+3062:  return (
+3126:  if (!isOpen) return null;
+3132:  return (
+3301:  if (!isOpen) return null;
+3305:  return (
+3364:  if (!isOpen) return null;
+3368:  return (
+3421:  if (!isOpen) return null;
+3437:  return (
+3546:  return (
+3602:  if (!isOpen) return null;
+3606:  return (
+3763:    if (!expiry) return "30 " + t.daysLeft;
+3765:    if (diff <= 0) return "Expired";
+3770:    if (days > 0) return `${days} ${t.daysLeft} ${hours} ${t.hoursLeft}`;
+3771:    return `${hours} ${t.hoursLeft}`;
+3780:  return (

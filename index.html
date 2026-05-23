@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>DSPT Ecosystem</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+      /* Extreme locking of the viewport */
+      html, body {
+        position: fixed !important;
+        overflow: hidden !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background: #05070A !important;
+        margin: 0;
+        padding: 0;
+        touch-action: pan-y !important;
+      }
+      #root {
+        position: fixed !important;
+        top: 0; left: 0; right: 0; bottom: 0;
+        overflow: hidden !important;
+        touch-action: pan-y !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Aggressive zoom prevention
+      document.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+          event.preventDefault();
+        }
+      }, { passive: false });
+
+      var lastTouchEnd = 0;
+      document.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault();
+        }
+        lastTouchEnd = now;
+      }, false);
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
